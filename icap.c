@@ -6,6 +6,13 @@
 #define Npts 10
 
 int main(void){
+    
+    /*variables for this program*/
+    double Tstep = (Tmax - Tmin) / (Npts); 
+    double T[Npts], vsin[Npts], dVd[Npts], icap[Npts];
+    double C;
+    int i, j;
+
 
     return 0;
 }
