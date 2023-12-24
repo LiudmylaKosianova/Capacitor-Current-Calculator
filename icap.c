@@ -13,7 +13,7 @@ int main(void){
     double C;
     int i, j;
 
-    printf("Welcome to the Capacitor Current Calculator!\n");
+    printf("Welcome to the Capacitor Current Calculator!\n\n");
     printf("\tEnter a value for capacitance in Farads: ");
     scanf(" %lf", &C);
     //printf("\tYou entered %.1lf\n", C);
