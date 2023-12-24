@@ -17,7 +17,28 @@ int main(void){
     printf("\tEnter a value for capacitance in Farads: ");
     scanf(" %lf", &C);
     printf("\tYou entered %.1lf", C);
-    /*fill T[] array*/
+    
+    /*fill T[] array - time*/
+    T[0] = Tmin;  
+    for(i=1; i<Npts; i++){
+        T[i] = T[i-1] + Tstep;  
+    }
+
+    /*fill vsin[] array - sin of time*/
+    for(i=0; i<Npts; i++){
+        vsin[i] = sin(T[i]);
+    }
+
+    /*fill dVd[] array - derivative */
+    for(i=0; i<Npts; i++){
+        dVd[i] = (vsin[i+1] - vsin[i]) / Tstep;
+    }
+
+    /*fill icap[] array - current*/
+    for(i=0; i<Npts; i++){
+        icap[i] = C*dVd[i];
+    }
+    
     printf("\tHere are your results: ");
 
 
